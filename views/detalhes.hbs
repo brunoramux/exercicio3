@@ -1,0 +1,17 @@
+<h1>Loja</h1>
+<p>Welcome to our product store</p>
+
+<ul>
+    {{#each product}}
+        <li>
+            <p><b>{{this.name}}</b>: {{this.description}}</p>
+            <p><b>Price</b>: ${{this.price}}</p>
+            
+        </li>
+    {{/each}}
+    <p>Comentarios</p>
+    {{#each comments}}
+              <p> {{this.comment}}</p>
+
+    {{/each}}
+</ul>

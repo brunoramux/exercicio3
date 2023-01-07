@@ -1,0 +1,15 @@
+<h1>Loja</h1>
+<p>Welcome to our product store</p>
+
+<ul>
+    {{#each products}}
+        <li>
+            <p><b>{{this.name}}</b>: {{this.description}}</p>
+            <p><b>Price</b>: ${{this.price}}</p>
+            <form action="/products/{{this.id}}"><button type="submit">Detalhes</button></form>
+            <p><form action="/products/comment/{{this.id}}" method="post">Comentar: <input type="text" name="comment">
+            <button type="submit">Comentar</button>
+            </form></p>
+        </li>
+    {{/each}}
+</ul>
